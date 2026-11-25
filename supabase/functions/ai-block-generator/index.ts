@@ -20,6 +20,7 @@ import {
 // ---------------------------------------------------------------------------
 const DEFAULT_ALLOWED_ORIGINS = [
   "https://shonisani00.lovable.app",
+  "https://visual-wl5k.vercel.app",
   "https://c9620341-f1f8-429f-985f-a09f437acc11.lovableproject.com",
   "https://id-preview--c9620341-f1f8-429f-985f-a09f437acc11.lovable.app",
   "http://localhost:8080",
