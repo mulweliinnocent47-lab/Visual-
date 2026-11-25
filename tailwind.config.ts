@@ -1,0 +1,46 @@
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  prefix: "",
+  theme: {
+    container: { center: true, padding: "1rem", screens: { "2xl": "1400px" } },
+    extend: {
+      fontFamily: { sans: ['Poppins', 'sans-serif'] },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
+        secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+        destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+        muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+        accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+        popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+        card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+        block: {
+          button: "hsl(var(--block-button))", text: "hsl(var(--block-text))", input: "hsl(var(--block-input))",
+          display: "hsl(var(--block-display))", math: "hsl(var(--block-math))", variable: "hsl(var(--block-variable))",
+          condition: "hsl(var(--block-condition))", logic: "hsl(var(--block-logic))", effects: "hsl(var(--block-effects))",
+          loop: "hsl(var(--block-loop))", function: "hsl(var(--block-function))", screen: "hsl(var(--block-screen))",
+          layout: "hsl(var(--block-layout))", backend: "hsl(var(--block-backend))",
+          realtime: "hsl(var(--block-realtime))", database: "hsl(var(--block-database))",
+          state: "hsl(var(--block-state))", component: "hsl(var(--block-component))",
+          media: "hsl(var(--block-media))", anim: "hsl(var(--block-anim))", perm: "hsl(var(--block-perm))",
+          auth: "hsl(var(--block-auth))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))", foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))", "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))", "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))", ring: "hsl(var(--sidebar-ring))",
+        },
+      },
+      borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 2px)", sm: "calc(var(--radius) - 4px)" },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
